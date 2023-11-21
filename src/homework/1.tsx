@@ -1,21 +1,21 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
 type Props = {
   children: React.ReactNode;
   onContentEndVisible: () => void;
-}
-  type ObserverOption = {
-    rootMargin: string;
-    threshold: number | number[];
-    root: null;
-  }
+};
+// type ObserverOption = {
+//   rootMargin: string;
+//   threshold: number | number[];
+//   root: null;
+// }
 
 export function Observer({ children, onContentEndVisible }: Props) {
   const endContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const options: ObserverOption = {
-      rootMargin: '0px',
+    const options: IntersectionObserverInit = {
+      rootMargin: "0px",
       threshold: 1.0,
       root: null,
     };
