@@ -4,11 +4,6 @@ type Props = {
   children: React.ReactNode;
   onContentEndVisible: () => void;
 };
-// type ObserverOption = {
-//   rootMargin: string;
-//   threshold: number | number[];
-//   root: null;
-// }
 
 export function Observer({ children, onContentEndVisible }: Props) {
   const endContentRef = useRef<HTMLDivElement>(null);
